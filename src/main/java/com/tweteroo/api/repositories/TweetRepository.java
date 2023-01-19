@@ -10,5 +10,5 @@ import com.tweteroo.api.models.TweterooUser;
 
 public interface TweetRepository extends JpaRepository<Tweet,Long>{
 
-   
+    List<Tweet> findByUserName(String userName);   
 }

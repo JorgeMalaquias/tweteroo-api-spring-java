@@ -28,7 +28,7 @@ public class TweetController {
 
     @GetMapping("/tweets/{userName}")
     public List<Tweet> listAllByUserName(@PathVariable String userName){
-        return repository.findAll();
+        return repository.findByUserName(userName);
     }
 
     @PostMapping("/tweets")
